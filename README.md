@@ -1,6 +1,4 @@
-# Healthcare-Facility-Location-Hong-Kong
-
-# Healthcare Facility Location Optimization in Hong Kong
+# Hong-Kong-Healthcare-Facility-Optimization-Dataset
 
 This repository contains the processed datasets used in the optimization experiments of the study:
 
