@@ -55,7 +55,7 @@ The retained healthcare facilities were spatially grouped using K-means clusteri
 
 All processed datasets used in the optimization experiments are publicly available in this repository.
 
-The repository includes the processed datasets for the SB20–EXT5, SB50–EXT10, and SB100–EXT20 experimental instances and can be accessed directly at: https://github.com/Praeploy1311/Healthcare-Facility-Location-Hong-Kong.git
+The repository includes the processed datasets for the SB20–EXT5, SB50–EXT10, and SB100–EXT20 experimental instances and can be accessed directly at: https://github.com/Praeploy1311/Healthcare-Facility-Location-Hong-Kong
 
 ## Related Publication
 
