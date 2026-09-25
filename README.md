@@ -14,13 +14,14 @@ This repository provides the processed input datasets used in the optimization e
 
 Each dataset contains the spatial and service-related information required by the optimization model, including:
 
-- representative demand-node coordinates, which also serve as candidate facility locations,
-- population demand associated with each demand node,
-- all retrieved public/government healthcare facility locations and the subset selected as representative existing healthcare facilities,
-- derived service-capacity indices for the selected existing healthcare facilities, calculated in Python from healthcare service statistics following the formulation described in the study, and
-- corresponding distance information used in the optimization model.
+- representative demand-node coordinates, which also serve as candidate healthcare facility sites;
+- population demand associated with each representative demand node;
+- public/government healthcare facility locations retrieved from OpenStreetMap;
+- the subset selected as representative existing healthcare facilities;
+- initial service-capacity values for the selected existing healthcare facilities, derived from healthcare service statistics following the formulation described in the study; and
+- the corresponding spatial information required for the optimization experiments.
 
-The datasets were generated through the data-preparation procedure described in the study and are ready for direct use in the optimization process. Detailed information on the data-preparation procedure and the formulation used to derive the service-capacity indices will be provided in the associated publication. The DOI of the published article will be added to this repository after publication.
+The datasets were generated through the data-preparation procedure described in the study and the accompanying Supplementary Information and are provided in a ready-to-use form for the optimization experiments.
 
 ## Data Sources
 
@@ -33,37 +34,34 @@ The processed optimization datasets were derived from the following publicly ava
 - **Spatial resolution:** approximately 100 m
 - **Source:** https://hub.worldpop.org/geodata/summary?id=73757
 
+The gridded population data were converted into population points and aggregated into representative demand nodes using population-weighted K-means clustering.
+
 ### 2. OpenStreetMap
 
-- **Data:** Public/government healthcare facility locations
+- **Data:** Healthcare facility locations
 - **Retrieval tool:** OSMnx in Python
-- **Selection:** Only healthcare facilities identified as public or government-operated were retained for this study; private healthcare facilities were excluded.
-- **Temporal reference:** OSM records available at the time of data collection for this study
+- **Selection:** Only healthcare facilities identified as public or government-operated were retained; private healthcare facilities were excluded.
 - **Source:** https://www.openstreetmap.org/
 
-The retained healthcare facilities were spatially grouped, and a subset was selected to represent the existing healthcare facilities used in each experimental instance.
+The retained healthcare facilities were spatially grouped using K-means clustering. For each cluster, the actual healthcare facility nearest to the cluster centroid was selected as the representative existing healthcare facility.
 
 ### 3. Hong Kong Hospital Authority
 
-- **Data:** Healthcare service statistics used to derive the service-capacity indices
+- **Data:** Healthcare service statistics used to derive the initial service capacities of the selected existing healthcare facilities
 - **Report:** Hospital Authority Statistical Report 2023–2024
 - **Source:** https://www3.ha.org.hk/Data/HAStatistics/StatisticalReport
 
 ## Availability
 
-The processed, ready-to-use experimental datasets used in the study are available from the first author upon reasonable request.
+All processed datasets used in the optimization experiments are publicly available in this repository.
 
-**Contact:**  
-Praeploy Poonprapan  
-Email: praeploy.po@kkumail.com
+The repository includes the processed datasets for the SB20–EXT5, SB50–EXT10, and SB100–EXT20 experimental instances and can be accessed directly at:
 
-No formal application or data use agreement is required to request the processed datasets.
-
-This repository is currently maintained for the associated research study and will be made publicly available following publication of the article.
+https://github.com/Praeploy1311/Healthcare-Facility-Location-Hong-Kong
 
 ## Related Publication
 
-The detailed methodology for data preparation, service-capacity index construction, optimization modeling, and computational experiments is described in the associated research article:
+The data-preparation procedure, construction of the initial service capacities, optimization model, and computational experiments are described in the associated research article:
 
 **Hybrid NSGA-II--PSO for Multi-Objective Healthcare Facility Location and Capacity Allocation: A Case Study of Hong Kong**
 
