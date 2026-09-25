@@ -2,7 +2,7 @@
 
 This repository contains the processed datasets used in the optimization experiments of the study:
 
-**Hybrid NSGA-II--PSO for Multi-Objective Healthcare Facility Location and Capacity Allocation: A Case Study of Hong Kong**
+**Hybrid NSGA-II–PSO for Multi-Objective Healthcare Facility Location and Capacity Allocation: A Case Study of Hong Kong**
 
 ## Optimization Input Datasets
 
@@ -61,6 +61,6 @@ The repository includes the processed datasets for the SB20–EXT5, SB50–EXT10
 
 The data-preparation procedure, construction of the initial service capacities, optimization model, and computational experiments are described in the associated research article:
 
-**Hybrid NSGA-II--PSO for Multi-Objective Healthcare Facility Location and Capacity Allocation: A Case Study of Hong Kong**
+**Hybrid NSGA-II–PSO for Multi-Objective Healthcare Facility Location and Capacity Allocation: A Case Study of Hong Kong**
 
 The full citation and DOI will be added here after publication.
